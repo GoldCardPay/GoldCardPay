@@ -1,0 +1,355 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1f2937 0%, #111827 50%, #000000 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Logo in top left corner */
+.logo-container {
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+    z-index: 10;
+}
+
+.logo-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.logo-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+    border-radius: 0.75rem;
+    box-shadow: 0 10px 25px rgba(251, 191, 36, 0.3);
+    color: white;
+}
+
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+/* Background decorative elements */
+.bg-decorations {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.decoration {
+    position: absolute;
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50%;
+    filter: blur(3rem);
+}
+
+.decoration-1 {
+    top: -10rem;
+    right: -10rem;
+    background: linear-gradient(135deg, rgba(251, 191, 36, 0.1) 0%, rgba(245, 158, 11, 0.1) 100%);
+}
+
+.decoration-2 {
+    bottom: -10rem;
+    left: -10rem;
+    background: linear-gradient(45deg, rgba(251, 191, 36, 0.1) 0%, rgba(245, 158, 11, 0.1) 100%);
+}
+
+/* Main container */
+.main-container {
+    position: relative;
+    width: 100%;
+    max-width: 28rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Brand messaging */
+.brand-section {
+    text-align: center;
+    margin-bottom: 4rem;
+    width: 1000px;
+}
+
+.main-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 0.75rem;
+    line-height: 1.2;
+}
+
+.subtitle {
+    font-size: 1.25rem;
+    color: #d1d5db;
+    line-height: 1.5;
+}
+
+/* Login card */
+.login-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(16px);
+    border-radius: 1.5rem;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 2rem;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.login-card:hover {
+    box-shadow: 0 32px 64px rgba(0, 0, 0, 0.3);
+}
+
+/* Form header */
+.form-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.form-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: white;
+}
+
+/* Form styles */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #e5e7eb;
+    margin-bottom: 0.5rem;
+}
+
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-icon {
+    position: absolute;
+    left: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #9ca3af;
+    pointer-events: none;
+}
+
+.form-input {
+    width: 100%;
+    padding: 0.75rem 0.75rem 0.75rem 2.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 0.75rem;
+    color: white;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+    backdrop-filter: blur(4px);
+}
+
+.form-input::placeholder {
+    color: #9ca3af;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #fbbf24;
+    box-shadow: 0 0 0 2px rgba(251, 191, 36, 0.2);
+}
+
+.password-toggle {
+    position: absolute;
+    right: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #9ca3af;
+    cursor: pointer;
+    padding: 0.25rem;
+    transition: color 0.2s ease;
+}
+
+.password-toggle:hover {
+    color: #e5e7eb;
+}
+
+/* Login button */
+.login-button {
+    width: 100%;
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+    color: white;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.75rem;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 14px rgba(251, 191, 36, 0.3);
+}
+
+.login-button:hover {
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(251, 191, 36, 0.4);
+}
+
+.login-button:active {
+    transform: translateY(0);
+}
+
+/* Form options */
+.form-options {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.875rem;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    color: #d1d5db;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.remember-me:hover {
+    color: white;
+}
+
+.checkbox {
+    margin-right: 0.5rem;
+    accent-color: #fbbf24;
+}
+
+.forgot-password {
+    color: #fbbf24;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.forgot-password:hover {
+    color: #f59e0b;
+    text-decoration: underline;
+}
+
+/* Form footer */
+.form-footer {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+}
+
+.signup-text {
+    color: #9ca3af;
+    font-size: 0.875rem;
+}
+
+.signup-link {
+    color: #fbbf24;
+    text-decoration: none;
+    margin-left: 0.25rem;
+    transition: color 0.2s ease;
+}
+
+.signup-link:hover {
+    color: #f59e0b;
+    text-decoration: underline;
+}
+
+/* Security badge */
+.security-badge {
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.security-text {
+    color: #9ca3af;
+    font-size: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25rem;
+}
+
+/* Responsive design */
+@media (max-width: 640px) {
+    .logo-container {
+        top: 1rem;
+        left: 1rem;
+    }
+    
+    .logo-wrapper {
+        gap: 0.5rem;
+    }
+    
+    .logo-icon {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+    
+    .logo-text {
+        font-size: 1.25rem;
+    }
+    
+    .main-title {
+        font-size: 2rem;
+    }
+    
+    .subtitle {
+        font-size: 1.125rem;
+    }
+    
+    .login-card {
+        padding: 1.5rem;
+    }
+    
+    .form-options {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: flex-start;
+    }
+}
