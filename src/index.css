@@ -1,3 +1,50 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Custom styles for mobile responsiveness */
+@media (max-width: 640px) {
+  .brand-section h1 {
+    @apply text-5xl whitespace-normal break-words;
+  }
+  
+  .brand-section p {
+    @apply text-xl;
+  }
+  
+  .brand-section {
+    @apply mb-8;
+  }
+  
+  .login-card {
+    @apply p-6 mb-16;
+  }
+  
+  .fixed.bottom-4 p {
+    @apply text-xs px-4;
+  }
+  
+  .absolute.top-6.left-6 {
+    @apply top-4 left-4;
+  }
+  
+  .absolute.top-6.left-6 .flex {
+    @apply gap-2;
+  }
+  
+  .absolute.top-6.left-6 .w-12.h-12 {
+    @apply w-10 h-10;
+  }
+  
+  .absolute.top-6.left-6 .text-2xl {
+    @apply text-xl;
+  }
+  
+  .flex.items-center.justify-between.text-sm {
+    @apply flex-col gap-4 items-start;
+  }
+  
+  .fixed.bottom-4 {
+    @apply bottom-2;
+  }
+}
